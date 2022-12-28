@@ -1,0 +1,36 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #8DB514;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a:hover {
+    color: #e2e8f0; /* helles lila */
+    background: #1D1C17; /* dunkles grau */
+    border-radius: 5px;
+}
+
+nav a:last-child {
+    margin-right: 20px;
+}
+
+nav .current-page {
+    background-color: #f3f6f9; /* hellgrau */
+}

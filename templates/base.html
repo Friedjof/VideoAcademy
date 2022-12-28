@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Binden Sie hier die CSS-Dateien ein, die für alle Apps in Ihrem Projekt verwendet werden sollen -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navigation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="navigation">
+        {% include "navigation.html" %}
+    </div>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="footer">
+        {% include "footer.html" %}
+    </div>
+</body>
+</html>

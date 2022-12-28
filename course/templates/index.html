@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Alle Kruse{% endblock %}
+
+{% block extra_css %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/courses.css' %}">
+
+{% endblock %}
+
+{% block content %}
+    <div class="links">
+        <button class="btn btn-primary" onclick="window.location.href = '{% url 'courses:course_create' %}';">Create Course</button>
+    </div>
+    <table>
+        {% for course in courses %}
+            <tr>
+                <td>{{ course.id }}</td>
+                <td>{{ course.title }}</td>
+                <td>{{ course.description }}</td>
+                <td>{{ course.image }}</td>
+                <td>
+                    <form action="{% url 'courses:course_delete' course.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Löschen</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

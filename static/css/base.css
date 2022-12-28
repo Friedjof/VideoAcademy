@@ -1,0 +1,28 @@
+body {
+    background-color: #1D1C17;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding-top: 70px;
+}
+
+h1 {
+    /* Center the heading */
+    margin: 10px auto;
+    width: 500px;
+}
+
+.navigation { }
+
+.container {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.footer {
+    /* fix the footer to the bottom of the page */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

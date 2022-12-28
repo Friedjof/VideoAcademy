@@ -1,0 +1,58 @@
+/* Stylen Sie das gesamte Formular */
+form {
+    /* Zentrieren Sie das Formular auf der Seite */
+    margin: 0 auto;
+    width: 500px;
+
+    /* Setzen Sie einen Rahmen um das Formular */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    /* Fügen Sie einen Hintergrund hinzu */
+    background: #1D1C17;
+    color: #fff;
+
+    /* Padding für die Formularfelder */
+    padding: 1em;
+}
+
+/* Stylen Sie die Formularbeschriftungen */
+label {
+    /* Setzen Sie eine andere Schriftart für die Formularbeschriftungen */
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    /* Setzen Sie etwas Abstand zwischen den Formularbeschriftungen und den Formularfeldern */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Stylen Sie die Formularfelder */
+input, textarea, select {
+    /* Setzen Sie die Schriftart für die Formularfelder */
+    font-family: sans-serif;
+    font-size: 14px;
+
+    /* Setzen Sie einen festen Breite für die Formularfelder */
+    width: 100%;
+
+    /* Setzen Sie einen Rahmen um die Formularfelder */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    /* Padding für die Formularfelder */
+    padding: 5px;
+}
+
+/* Stylen Sie den Absenden-Button */
+button {
+    /* Setzen Sie die Schriftart für den Absenden-Button */
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    /* Setzen Sie einen Rahmen um den Absenden-Button */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
