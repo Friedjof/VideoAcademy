@@ -1,15 +1,29 @@
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
+.card-img-top {
+  /* change the image size */
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+
+  /* round the corners */
+  border-radius: 1rem 1rem 0 0;
 }
 
-tr {
-    border-bottom: 1px solid #ddd;
-}
+.card-body {
+  /* change the text size */
+  font-size: 1.5rem;
+  background: #8DB514;
+  margin-top: -2rem;
+  padding: 10px;
 
-th, td {
-    text-align: left;
-    padding: 16px;
+  /* round the corners */
+  border-radius: 0 0 1rem 1rem;
+
+  /* show card body over the image */
+  position: relative;
+
+  /* add a shadow */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+  /* add color flow */
+  background: linear-gradient(0deg, #8DB514 0%, #8DB514 85%, rgba(0, 0, 0, 0.0) 95%);
 }

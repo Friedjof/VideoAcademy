@@ -27,3 +27,7 @@ def course_delete(request, course_id):
     course.delete()
     return redirect('courses:index')
 
+
+def course_show(request, course_id):
+    course = get_object_or_404(Course, pk=course_id)
+    return render(request, 'show.html', {'course': course})

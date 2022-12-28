@@ -6,7 +6,7 @@ from django.contrib import admin
 class Course(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='static/course/images/')
 
     def __str__(self):
         return f"{self.title}"

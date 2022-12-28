@@ -5,28 +5,24 @@
 
 {% block extra_css %}
 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/courses.css' %}">
+    <link href="{% static 'css/courses.css' %}" rel="stylesheet">
 
 {% endblock %}
 
 {% block content %}
-    <div class="links">
-        <button class="btn btn-primary" onclick="window.location.href = '{% url 'courses:course_create' %}';">Create Course</button>
-    </div>
-    <table>
-        {% for course in courses %}
-            <tr>
-                <td>{{ course.id }}</td>
-                <td>{{ course.title }}</td>
-                <td>{{ course.description }}</td>
-                <td>{{ course.image }}</td>
-                <td>
-                    <form action="{% url 'courses:course_delete' course.id %}" method="post">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-danger">Löschen</button>
-                    </form>
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
+
+  <div class="row">
+    {% for course in courses %}
+      <div class="col-sm-4">
+        <div class="card">
+          <img src="/{{ course.image }}" class="card-img-top" alt="{{ course.title }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ course.title }}</h5>
+            <p class="card-text">{{ course.description }}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
 {% endblock %}
